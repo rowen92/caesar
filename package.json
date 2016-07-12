@@ -1,0 +1,17 @@
+{
+  "name": "included",
+  "version": "1.0.0",
+  "description": "Caesar cipher and decipher, the meanings of the letters are shifted by some set amount. Used the ROT13 cipher. Do not transformed any non-alphabetic character (i.e. spaces, punctuation), but do passed them on.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "node index.js"
+  },
+  "author": "Rowen",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jsdoc": "^3.4.0",
+    "mocha": "^2.5.3"
+  }
+}
