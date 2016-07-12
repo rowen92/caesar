@@ -1,5 +1,5 @@
 {
-  "name": "twitter",
+  "name": "caesar",
   "version": "1.0.0",
   "description": "Caesar cipher and decipher, the meanings of the letters are shifted by some set amount. Used the ROT13 cipher. Do not transformed any non-alphabetic character (i.e. spaces, punctuation), but do passed them on.",
   "main": "index.js",
