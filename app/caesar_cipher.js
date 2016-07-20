@@ -14,11 +14,10 @@ function CaesarСipher() {};
 /**
  * Caesar cipher
  * @method
- * @param  {integer} shift  Shift the meanings of the letters
  * @param  {string} str     The string that need to encrypt
  * @return {string}         The encrypted string
  */
-CaesarСipher.prototype.call = function( str ) {
+CaesarСipher.prototype.launch = function( str ) {
 
   this.str = str.toLowerCase();
 
@@ -26,20 +25,22 @@ CaesarСipher.prototype.call = function( str ) {
     lengthSymbols = symbols.length,
     encryptedSymbols = [],
     unicodeNumber,
-    i = 0;
+    i = 0,
+    charCodeOfSymbol;
 
   for ( ; i < lengthSymbols; i++ ) {
+    charCodeOfSymbol = symbols[ i ].charCodeAt( 0 );
 
     if ( symbols[ i ].match( /[a-z]/ ) ) {
 
-      if ( symbols[ i ].charCodeAt() < 110 ) {
-        unicodeNumber = 13 + symbols[ i ].charCodeAt();
+      if ( charCodeOfSymbol < 110 ) {
+        unicodeNumber = 13 + charCodeOfSymbol;
       } else {
-        unicodeNumber = (13 + symbols[ i ].charCodeAt()) - 26;
+        unicodeNumber = (13 + charCodeOfSymbol) - 26;
       }
 
     } else {
-      unicodeNumber = symbols[ i ].charCodeAt();
+      unicodeNumber = charCodeOfSymbol;
     }
 
     encryptedSymbols.push( String.fromCharCode( unicodeNumber ) );
